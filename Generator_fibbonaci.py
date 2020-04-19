@@ -55,3 +55,20 @@ for i in Fibs(10):
 	print(i, end=' ')
 print()
 print(list(Fibs(10)))
+
+
+print()
+# WYRAŻENIE LISTOWE A GENERATOR
+print('WYRAŻENIE LISTOWE A GENERATOR'.center(85,'-'))
+lst = [1 if x % 2 == 0 else 0 for x in range(10)]
+genr = (1 if x % 2 == 0 else 0 for x in range(10))
+
+print(lst)
+for v in lst:
+    print(v, end=" ")
+print()
+
+print(genr)
+for v in genr:
+    print(v, end=" ")
+print()
