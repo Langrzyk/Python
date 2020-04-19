@@ -48,11 +48,14 @@ def sumPath(A: list, function: str) -> int:
             elif function=="max":
               memo[j] = int(A[i][j]) + max(memo[j], memo[j + 1]);
             else:
-              raise ValueError("Parameter function must have a value:
-                                'max' or 'min'.")
+              raise ValueError("Parameter function must have a value: 'max' or 'min'.")
 
     # Show the Path
     # print("Path: ", path[0][::-1])
 
     # return the top element
     return memo[0]
+
+
+print(sumPath(A,'min'))
+print(sumPath(A,'max'))
