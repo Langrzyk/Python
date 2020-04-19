@@ -1,7 +1,7 @@
 print()
 # wersja obiektowa -------------------------------------------------------------
 # bezpośredniej implementacji protokołu iteratora ------------------------------
-print('WERSJA OBIEKTOWA'.center(85,'-'))
+print('FIBONACCI WERSJA OBIEKTOWA'.center(85,'-'))
 class Fib:
 	def __init__(self, nn):
 		self.__n = nn
@@ -40,7 +40,7 @@ print(list(Class(10)))
 
 print()
 # GENERATOR Z YIELD ------------------------------------------------------------
-print('GENERATOR Z YIELD'.center(85,'-'))
+print('GENERATOR FIBONACCI Z YIELD'.center(85,'-'))
 def Fibs(n):
     p = pp = 1
     for i in range(n):
@@ -71,4 +71,30 @@ print()
 print(genr)
 for v in genr:
     print(v, end=" ")
+print()
+
+print()
+# LAMBDA I FUNKCJA 	map() ------------------------------------------------------
+print('LAMBDA I FUNKCJA MAP()'.center(85,'-'))
+lista1 = [x for x in range(5)]
+lista2 = list(map(lambda x: 2 ** x, lista1))
+print(lista2)
+
+for x in map(lambda x: x * x, lista2):
+	print(x, end=' ')
+print()
+
+
+print()
+# LAMBDA I FUNKCJA filter() ----------------------------------------------------
+print('LAMBDA I FUNKCJA filter()'.center(85,'-'))
+from random import seed, randint
+seed(5)
+dane = [ randint(-10,10) for x in range(10) ]
+filtr = list(filter(lambda x: x > 0 and x % 2 == 0, dane))
+print(dane)
+print(filtr)
+
+for i in filter(lambda x: x > 0 and x % 2 == 0, dane):
+    print(i,end=' ')
 print()
