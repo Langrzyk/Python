@@ -22,11 +22,11 @@ try:
             else:
                 continue
 
-    print("\nWYSTĘPOWANIE ZNAKÓW")
+    print("\\nOCCURRENCE OF CHARACTERS")
     for key in sorted(dict):
         print(key, "->", dict[key], end="  ")
 
-    print("\nHISTOGRAM ZNAKOW")
+    print("\nCHARACTER HISTOGRAM")
     sorted_x = sorted(dict.items(), key=lambda kv: kv[1], reverse=True)
     for i in sorted_x:
         print(i[0], "->", i[1], end="  ")
